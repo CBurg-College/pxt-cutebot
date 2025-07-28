@@ -5,7 +5,7 @@
         "core": "*",
         "radio": "*",
         "microphone": "*",
-        "pxt-colorsensor": "github:CBurg-College/pxt-colorsensor#c6f957d1eeb75d762934345480beb3be0781bd1c"
+        "pxt-color": "github:CBurg-College/pxt-color#60e49e02fd91f1d38bbc793b4ffb74596afbb5c2"
     },
     "files": [
         "main.blocks",
