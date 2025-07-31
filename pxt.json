@@ -5,7 +5,7 @@
         "core": "*",
         "radio": "*",
         "microphone": "*",
-        "pxt-color": "github:CBurg-College/pxt-color#60e49e02fd91f1d38bbc793b4ffb74596afbb5c2"
+        "pxt-color": "github:cburg-college/pxt-color#7ea57ca8cc230b36a813d4a1cd7ce7e60a34e461"
     },
     "files": [
         "main.blocks",
@@ -16,7 +16,7 @@
         "test.ts"
     ],
     "targetVersions": {
-        "target": "8.0.11",
+        "target": "8.0.13",
         "targetId": "microbit"
     },
     "supportedTargets": [
