@@ -1,58 +1,3 @@
-enum Servo {
-    //% block="S1" 
-    S1,
-    //% block="S2"
-    S2,
-    //% block="S3" 
-    S3,
-    //% block="S4"
-    S4
-}
-
-enum ServoType {
-    //% block="180"
-    ST180 = 180,
-    //% block="180"
-    ST27 = 270,
-    //% block="360"
-    ST360 = 360
-}
-
-enum Tracking {
-    //% block="◌ ◌ ◌ ◌" 
-    State_0,
-    //% block="● ◌ ◌ ◌" 
-    State_1,
-    //% block="◌ ● ◌ ◌" 
-    State_2,
-    //% block="● ● ◌ ◌" 
-    State_3,
-    //% block="◌ ◌ ● ◌" 
-    State_4,
-    //% block="● ◌ ● ◌" 
-    State_5,
-    //% block="◌ ● ● ◌" 
-    State_6,
-    //% block="● ● ● ◌" 
-    State_7,
-    //% block="◌ ◌ ◌ ●" 
-    State_8,
-    //% block="● ◌ ◌ ●" 
-    State_9,
-    //% block="◌ ● ◌ ●" 
-    State_10,
-    //% block="● ● ◌ ●"
-    State_11,
-    //% block="◌ ◌ ● ●" 
-    State_12,
-    //% block="● ◌ ● ●" 
-    State_13,
-    //% block="◌ ● ● ●" 
-    State_14,
-    //% block="● ● ● ●" 
-    State_15
-}
-
 enum Led {
     //% block="left led"
     //% block.loc.nl="linker led"
@@ -63,21 +8,6 @@ enum Led {
     //% block="both leds"
     //% block.loc.nl="beide leds"
     Both
-}
-
-enum TrackSensor {
-    //% block="far left"
-    //% block.loc.nl="ver links"
-    FarLeft = 1,
-    //% block="left"
-    //% block.loc.nl="links"
-    Left = 2,
-    //% block="right"
-    //% block.loc.nl="rechts"
-    Right = 4,
-    //% block="far right"
-    //% block.loc.nl="ver rechts"
-    FarRight = 8
 }
 
 namespace Cutebot {
@@ -117,7 +47,7 @@ namespace Cutebot {
 
     // MOTOR MODULE
 
-    export function setSpeed(left: number, right: number): void {
+    export function speed(left: number, right: number): void {
         // speed in % [-100, 100]
 
         let direction: number = 0;
@@ -183,7 +113,7 @@ namespace Cutebot {
     }
 
     // track can be a combination of OR-ed TrackSensor values
-    export function isOnTrack(track:TrackSensor) : boolean {
+    export function isOnTrack(track:Track) : boolean {
         let state = (readTracking() & track)
         return (state == track)
     }
